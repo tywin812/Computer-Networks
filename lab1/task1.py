@@ -1,20 +1,19 @@
-from ping3 import ping
 import csv
-
-def RTT(url):
-    rtt = ping(url) * 1000
-    return(rtt)
+from ping3 import ping
 
 hosts = ["www.google.com",
          "www.geeksforgeeks.org",
          "www.imperva.com",
-         "www.w3schools.com",
+         "www.mail.ru",
          "stackoverflow.com",
          "sky.pro",
          "yandex.ru",
          "vk.com",
          "www.youtube.com",
          "www.twitch.tv"]
+
+def RTT(url):
+    return ping(url) * 1000
 
 with open("rtt_results.csv", mode="w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
