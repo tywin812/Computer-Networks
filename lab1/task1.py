@@ -1,5 +1,7 @@
 import csv
+
 from ping3 import ping
+
 
 hosts = ["www.google.com",
          "www.geeksforgeeks.org",
